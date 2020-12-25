@@ -16,7 +16,7 @@ namespace antlr4_example
 				Console.WriteLine("Input the chat.");
 
 				// to type the EOF character and end the input: use CTRL+D, then press <enter>
-				while ((input = Console.ReadLine()) != "\u0004")
+				while ((input = Console.ReadLine()) != "")
 				{
 					text.AppendLine(input);
 				}
