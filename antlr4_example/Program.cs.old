@@ -15,7 +15,7 @@ namespace antlr4_example
 				var text = new StringBuilder();
 				Console.WriteLine("Input the chat.");
 
-				// to end the input, enter a blank line then press <enter> 
+				// to type the EOF character and end the input: use CTRL+D, then press <enter>
 				while ((input = Console.ReadLine()) != "")
 				{
 					text.AppendLine(input);

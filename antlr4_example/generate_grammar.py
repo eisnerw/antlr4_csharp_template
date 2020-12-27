@@ -6,8 +6,8 @@ import argparse
 import subprocess
 
 
-ANTLR_BINARY_COMPLETE_URL       = r'https://www.antlr.org/download/antlr-4.8-complete.jar'
-ANTLR_BINARY_FILENAME           = r'antlr-4.8-complete.jar'
+ANTLR_BINARY_COMPLETE_URL       = r'https://www.antlr.org/download/antlr-4.9-complete.jar'
+ANTLR_BINARY_FILENAME           = r'antlr-4.9-complete.jar'
 JAVA_DOWNLOAD_URL               = r'https://java.com/en/download/'
 
 
@@ -31,7 +31,8 @@ def get_java_path():
 
 
 def format_antlr_command_string(java_path, args):
-    return f'"{java_path}" -jar {ANTLR_BINARY_FILENAME} -Werror -Dlanguage={args.target} -visitor -listener -o {args.output_dir} {args.grammar}'
+    #return f'"{java_path}" -jar {ANTLR_BINARY_FILENAME} -Werror -Dlanguage={args.target} -visitor -listener -o {args.output_dir} {args.grammar}'
+    return f'"{java_path}" -jar {ANTLR_BINARY_FILENAME} -Dlanguage={args.target} -visitor -o {args.output_dir} {args.grammar}'
 
 
 def run_antlr(args):
